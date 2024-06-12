@@ -4,6 +4,8 @@ Console.WriteLine("========================================================");
 
 SolutionUsingList();
 
+Console.WriteLine();
+
 Console.WriteLine("=======================================================");
 Console.WriteLine("================= Solution Usin Queue =================");
 Console.WriteLine("=======================================================");
@@ -80,7 +82,7 @@ void SolutionUsingList()
 
     foreach (var item in currentStateInGirlsBalcony)
     {
-        Console.WriteLine($"g{item.Key} matched with b{item.Value.First()}");
+        Console.WriteLine($"Girl {item.Key} is matched with Boy {item.Value.First()}");
     }
 }
 
