@@ -1,36 +1,53 @@
-﻿Console.WriteLine("========================================================");
-Console.WriteLine("================== Solution Usin List ==================");
-Console.WriteLine("========================================================");
+﻿Console.WriteLine("=========================================================");
+Console.WriteLine("================== Solution Using List ==================");
+Console.WriteLine("=========================================================");
 
 SolutionUsingList();
 
 Console.WriteLine();
 
-Console.WriteLine("=======================================================");
-Console.WriteLine("================= Solution Usin Queue =================");
-Console.WriteLine("=======================================================");
+Console.WriteLine("========================================================");
+Console.WriteLine("================= Solution Using Queue =================");
+Console.WriteLine("========================================================");
 
 SolutionUsingQueue();
 
 void SolutionUsingList()
 {
     var boysPreferences = new Dictionary<int, List<int>>()
-{
-    {1, new List<int> { 3, 2, 5, 1, 4} },
-    {2, new List<int> { 1, 2, 5, 4, 3} },
-    {3, new List<int> { 4, 3, 2, 1 ,5} },
-    {4, new List<int> { 1, 3, 4, 2, 5} },
-    {5, new List<int> { 1, 2, 4, 5 ,3} }
-};
+    { 
+    { 1, new List<int>{ 3, 5, 4, 1, 2 }},
+    { 2, new List<int>{ 3, 2, 1, 5, 4 }},
+    { 3, new List<int>{ 4, 5, 3, 2, 1 }},
+    { 4, new List<int>{ 1, 5, 3, 4, 2 }},
+    { 5, new List<int>{ 1, 2, 3, 4, 5 }}};
 
     var girlsPreferences = new Dictionary<int, List<int>>()
-{
-    {1, new List<int> { 3, 5, 2, 1, 4} },
-    {2, new List<int> { 5, 2, 1, 4, 3} },
-    {3, new List<int> { 4, 3, 5, 1, 2} },
-    {4, new List<int> { 1, 2, 3, 4, 5} },
-    {5, new List<int> { 2, 3, 4, 1, 5} }
-};
+    {
+    { 1, new List<int> { 3, 5, 4, 1, 2 }},
+    { 2, new List<int> { 4, 5, 2, 3, 1 }},
+    { 3, new List<int> { 3, 2, 5, 1, 4 }},
+    { 4, new List<int> { 2, 4, 1, 3, 5 }},
+    { 5, new List<int> { 5, 3, 4, 1, 2 }}};
+
+
+    //    var boysPreferences = new Dictionary<int, List<int>>()
+    //{
+    //    {1, new List<int> { 3, 2, 5, 1, 4} },
+    //    {2, new List<int> { 1, 2, 5, 4, 3} },
+    //    {3, new List<int> { 4, 3, 2, 1 ,5} },
+    //    {4, new List<int> { 1, 3, 4, 2, 5} },
+    //    {5, new List<int> { 1, 2, 4, 5 ,3} }
+    //};
+
+    //    var girlsPreferences = new Dictionary<int, List<int>>()
+    //{
+    //    {1, new List<int> { 3, 5, 2, 1, 4} },
+    //    {2, new List<int> { 5, 2, 1, 4, 3} },
+    //    {3, new List<int> { 4, 3, 5, 1, 2} },
+    //    {4, new List<int> { 1, 2, 3, 4, 5} },
+    //    {5, new List<int> { 2, 3, 4, 1, 5} }
+    //};
 
     var currentStateInGirlsBalcony = new Dictionary<int, List<int>>()
 {
@@ -88,23 +105,40 @@ void SolutionUsingList()
 
 void SolutionUsingQueue()
 {
+    //    var boysPreferences = new Dictionary<int, Queue<int>>()
+    //{
+    //    {1, new Queue<int>(new[] { 3, 2, 5, 1, 4 })},
+    //    {2, new Queue<int>(new[] { 1, 2, 5, 4, 3 })},
+    //    {3, new Queue<int>(new[] { 4, 3, 2, 1, 5 })},
+    //    {4, new Queue<int>(new[] { 1, 3, 4, 2, 5 })},
+    //    {5, new Queue<int>(new[] { 1, 2, 4, 5, 3 })}
+    //};
+
+    //    var girlsPreferences = new Dictionary<int, List<int>>()
+    //{
+    //    {1, new List<int> { 3, 5, 2, 1, 4 }},
+    //    {2, new List<int> { 5, 2, 1, 4, 3 }},
+    //    {3, new List<int> { 4, 3, 5, 1, 2 }},
+    //    {4, new List<int> { 1, 2, 3, 4, 5 }},
+    //    {5, new List<int> { 2, 3, 4, 1, 5 }}
+    //};
+
     var boysPreferences = new Dictionary<int, Queue<int>>()
 {
-    {1, new Queue<int>(new[] { 3, 2, 5, 1, 4 })},
-    {2, new Queue<int>(new[] { 1, 2, 5, 4, 3 })},
-    {3, new Queue<int>(new[] { 4, 3, 2, 1, 5 })},
-    {4, new Queue<int>(new[] { 1, 3, 4, 2, 5 })},
-    {5, new Queue<int>(new[] { 1, 2, 4, 5, 3 })}
+    {1, new Queue<int>(new[] { 3, 5, 4, 1, 2 })},
+    {2, new Queue<int>(new[] { 3, 2, 1, 5, 4 })},
+    {3, new Queue<int>(new[] { 4, 5, 3, 2, 1 })},
+    {4, new Queue<int>(new[] { 1, 5, 3, 4, 2 })},
+    {5, new Queue<int>(new[] { 1, 2, 3, 4, 5 })}
 };
 
     var girlsPreferences = new Dictionary<int, List<int>>()
-{
-    {1, new List<int> { 3, 5, 2, 1, 4 }},
-    {2, new List<int> { 5, 2, 1, 4, 3 }},
-    {3, new List<int> { 4, 3, 5, 1, 2 }},
-    {4, new List<int> { 1, 2, 3, 4, 5 }},
-    {5, new List<int> { 2, 3, 4, 1, 5 }}
-};
+    {
+    { 1, new List<int> { 3, 5, 4, 1, 2 }},
+    { 2, new List<int> { 4, 5, 2, 3, 1 }},
+    { 3, new List<int> { 3, 2, 5, 1, 4 }},
+    { 4, new List<int> { 2, 4, 1, 3, 5 }},
+    { 5, new List<int> { 5, 3, 4, 1, 2 }}};
 
     var girlProposals = new Dictionary<int, int>();
     var boyProposals = new Dictionary<int, int>();
